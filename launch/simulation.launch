@@ -20,6 +20,6 @@
     <arg name="map_keepout_file" value="$(find sgs_server_ros)/config/maps/$(arg keepout_map_name).yaml"/>
   </include>
 
-  <node name="waypoints_editor" pkg="task_programmer" type="waypoints_editor" />
+  <node name="waypoints_editor" pkg="sgs_server_ros" type="waypoints_editor" />
 
 </launch>
