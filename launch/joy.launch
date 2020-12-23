@@ -7,7 +7,7 @@
 
   <arg name="joy_config" default="ps3-holonomic" />
   <arg name="joy_dev" default="/dev/input/js0" />
-  <arg name="config_filepath" default="$(find task_programmer)/config/$(arg joy_config).config.yaml" />
+  <arg name="config_filepath" default="$(find sgs_server_ros)/config/$(arg joy_config).config.yaml" />
 
   <!-- JoyPad Settings -->
   <node pkg="joy" type="joy_node" name="joy_node" if="$(arg DUALSHOCK)">
@@ -18,7 +18,7 @@
   </node>
 
   <!-- Joy Smoother -->
-  <node pkg="task_programmer" type="joy_smoother.py" name="joy_smoother" if="$(arg JOY_SMOOTHER)">
+  <node pkg="sgs_server_ros" type="joy_smoother.py" name="joy_smoother" if="$(arg JOY_SMOOTHER)">
     <remap from="joy_in" to="$(arg joy_pad)/joy" />
     <remap from="joy_out" to="$(arg joy_pad)/joy_smoother" />
   </node>
@@ -28,7 +28,7 @@
     <remap from="joy_in" to="$(arg joy_pad)/joy" unless="$(arg JOY_SMOOTHER)"/>
     <remap from="joy_in" to="$(arg joy_pad)/joy_smoother" if="$(arg JOY_SMOOTHER)"/>
     <remap from="joy_out" to="joy" />
-    <rosparam command="load" file="$(find task_programmer)/config/$(arg joy_pad)_to_ps3.yaml"/>
+    <rosparam command="load" file="$(find sgs_server_ros)/config/$(arg joy_pad)_to_ps3.yaml"/>
   </node>
 
   <node pkg="teleop_twist_joy" name="teleop_twist_joy" type="teleop_node">
