@@ -4,5 +4,5 @@
   <arg name="map_name" default="map" />
   
   <node name="map_saver" pkg="map_server" type="map_saver"
-	args="-f ~/sgs/build/bin/data/maps/$(arg map_name)" output="screen"/>
+	args="-f /home/seed/sgs/build/bin/data/maps/$(arg map_name)" output="screen"/>
 </launch>
