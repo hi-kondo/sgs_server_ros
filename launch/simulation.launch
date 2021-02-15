@@ -22,4 +22,6 @@
 
   <node name="waypoints_editor" pkg="sgs_server_ros" type="waypoints_editor" />
 
+  <node name="rviz" pkg="rviz" type="rviz" args ="-d $(find sgs_server_ros)/view.rviz" required="true"/>
+
 </launch>

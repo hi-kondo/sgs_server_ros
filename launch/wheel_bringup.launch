@@ -18,9 +18,9 @@
     <param name="~angle_max" value="2.01" /> 
   </node>
 
-  <include file="$(find sgs_server_ros)/launch/joy.launch">
+  <!--include file="$(find sgs_server_ros)/launch/joy.launch">
     <arg name="joy_pad" value="$(arg joy_pad)" />
     <arg name="DUALSHOCK" value="$(arg DUALSHOCK)"/>
-  </include>
+  </include-->
 
 </launch>
