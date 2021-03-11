@@ -4,10 +4,8 @@
 
 依存パッケージインストール
 
-`
-sudo apt-get install libbluetooth-dev
+`sudo apt-get install libbluetooth-dev`
 
-`
 bluetooth設定
 `sudo gedit /lib/systemd/system/bluetooth.service`
 
